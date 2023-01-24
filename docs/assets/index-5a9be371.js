@@ -1,14 +1,14 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))i(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const n of a.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function l(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerpolicy&&(a.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?a.credentials="include":r.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(r){if(r.ep)return;r.ep=!0;const a=l(r);fetch(r.href,a)}})();const s=`<div class="accordion-item">\r
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))i(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const o of a.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function l(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerpolicy&&(a.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?a.credentials="include":r.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(r){if(r.ep)return;r.ep=!0;const a=l(r);fetch(r.href,a)}})();const s=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingOne">\r
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">\r
         GitHub\r
       </button>\r
     </h2>\r
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">\r
-      <div class="accordion-body">\r
+      <div id="gitmysql" class="accordion-body">\r
         <p>\r
-          Para trabajar con Git, primero debemos descargarlo en el siguiente enlace Git (git-scm.com).\r
-          y también vscode Download <br>\r
+          Para trabajar con Git, primero debemos descargarlo en el siguiente enlace <a href="https://git-scm.com/downloads" target="_blank">gitHub</a>\r
+          y también vscode <a href="https://code.visualstudio.com/insiders/" target="_blank">Download</a> <br>\r
           Visual Studio Code - Mac, Linux, Windows o su editor preferido.<br><br>\r
           El siguiente paso es configurarlo para trabajar con él.\r
       </p>\r
@@ -68,6 +68,9 @@
           <li><b>git add . </b>para subir los cambios</li>\r
           <li><b>git commit -m "comentario" </b> comentar lo que se hizo</li>\r
           <li><b>git push </b>es para subir los cambios al repositorio en GitHub</li>\r
+          <li><b>git tag -a vs 1.0 -m "primer tag" </b>es para crear tag, verlos en gitHub</li>\r
+          <li><b>git tag </b>pa listar los tag</li>\r
+          <li><b>git push --tags </b>para subirlo a gitHub</li>\r
           <p>\r
               para clonar repositorio<br><br>\r
 \r
@@ -85,9 +88,15 @@
           <p>Crear rama</p>\r
           <li><b>git branch nombre.de.la.rama </b></li>\r
           <p>cambiar de rama</p>\r
-          <li><b>git checkout -b nombre.de.la.rama </b></li>\r
+          <li><b>git checkout nombre.de.la.rama </b></li>\r
           <p>para saber en que rama estamos</p>\r
           <li><b>git branch</b></li>\r
+          <p>para cambiar el nombre de la rama</p>\r
+          <li><b>git branch -m nuevo.nombre</b></li>\r
+          <p>si estamos en otra rama, debemos especificar el<br>\r
+             nombre de la rama a cambiar, y el nuevo nombre\r
+          </p>\r
+          <li><b>git branch -m nomb.de.rama new.nombre</b></li>\r
           <p>\r
               y de ahí ya haríamos los cambios al proyecto para unir los cambios a la rama principal\r
               hacemos esto<br>\r
@@ -104,14 +113,14 @@
 \r
       </div>\r
     </div>\r
-  </div>`,t=o=>{(()=>{const e=document.createElement("div");e.innerHTML=s,document.querySelector(o).append(e)})()},c=`<div class="accordion-item">\r
+  </div>`,t=n=>{(()=>{const e=document.createElement("div");e.innerHTML=s,document.querySelector(n).append(e)})()},c=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingTwo">\r
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">\r
         Mysql\r
       </button>\r
     </h2>\r
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">\r
-      <div class="accordion-body">\r
+      <div id="gitmysql" class="accordion-body">\r
         Pasos para crear base de datos en consola\r
 \r
         <ul>\r
@@ -160,7 +169,7 @@
             <li>CREATE DATABASE db_sistema; de esta manera creamos la base de datos</li>\r
             <li>USE db_sistema El USE es para utilizar la base de datos que hemos creado</li>\r
             <li>Luego procedemos a crear una tabla</li>\r
-            <li style="color:gray;">\r
+            <li style="color:rgb(0, 0, 0);">\r
                 CREATE TABLE usuarios ( <br>\r
                 id INT NOT NULL AUTO_INCREMENT, <br>\r
                 nombre VARCHAR(50) NOT NULL, <br>\r
@@ -175,7 +184,7 @@
             </li>\r
             <li>luego le ingresamos datos a la tabla de usuarios de esta manera</li>\r
             <br>\r
-            <li style="color:gray;">\r
+            <li style="color:rgb(0, 0, 0);">\r
                 INSERT INTO usuarios (nombre, edad, email) VALUES ('Oscar', 25,\r
                 'oscar@gmail.com');<br>\r
                 INSERT INTO usuarios (nombre, edad, email) VALUES ('Layla', 15,\r
@@ -193,7 +202,7 @@
             voy a crear crear otra tabla para relacionarla con la tabla usuarios\r
             usando claves foráneas\r
         </p>\r
-        <p style="color:gray;">\r
+        <p style="color:rgb(0, 0, 0);">\r
             CREATE TABLE productos <br>\r
             ( <br>\r
             id INT NOT NULL AUTO_INCREMENT, <br>\r
@@ -207,4 +216,4 @@
 \r
       </div>\r
     </div>\r
-  </div>`,d=o=>{(()=>{const e=document.createElement("div");e.innerHTML=c,document.querySelector(o).append(e)})()};t("#gitHub");d("#mysql");
+  </div>`,d=n=>{(()=>{const e=document.createElement("div");e.innerHTML=c,document.querySelector(n).append(e)})()};t("#gitHub");d("#mysql");
