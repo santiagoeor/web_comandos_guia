@@ -5,10 +5,10 @@
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
+      <div id="gitmysql" class="accordion-body">
         <p>
-          Para trabajar con Git, primero debemos descargarlo en el siguiente enlace Git (git-scm.com).
-          y también vscode Download <br>
+          Para trabajar con Git, primero debemos descargarlo en el siguiente enlace <a href="https://git-scm.com/downloads" target="_blank">gitHub</a>
+          y también vscode <a href="https://code.visualstudio.com/insiders/" target="_blank">Download</a> <br>
           Visual Studio Code - Mac, Linux, Windows o su editor preferido.<br><br>
           El siguiente paso es configurarlo para trabajar con él.
       </p>
@@ -68,6 +68,9 @@
           <li><b>git add . </b>para subir los cambios</li>
           <li><b>git commit -m "comentario" </b> comentar lo que se hizo</li>
           <li><b>git push </b>es para subir los cambios al repositorio en GitHub</li>
+          <li><b>git tag -a vs 1.0 -m "primer tag" </b>es para crear tag, verlos en gitHub</li>
+          <li><b>git tag </b>pa listar los tag</li>
+          <li><b>git push --tags </b>para subirlo a gitHub</li>
           <p>
               para clonar repositorio<br><br>
 
@@ -85,9 +88,15 @@
           <p>Crear rama</p>
           <li><b>git branch nombre.de.la.rama </b></li>
           <p>cambiar de rama</p>
-          <li><b>git checkout -b nombre.de.la.rama </b></li>
+          <li><b>git checkout nombre.de.la.rama </b></li>
           <p>para saber en que rama estamos</p>
           <li><b>git branch</b></li>
+          <p>para cambiar el nombre de la rama</p>
+          <li><b>git branch -m nuevo.nombre</b></li>
+          <p>si estamos en otra rama, debemos especificar el<br>
+             nombre de la rama a cambiar, y el nuevo nombre
+          </p>
+          <li><b>git branch -m nomb.de.rama new.nombre</b></li>
           <p>
               y de ahí ya haríamos los cambios al proyecto para unir los cambios a la rama principal
               hacemos esto<br>

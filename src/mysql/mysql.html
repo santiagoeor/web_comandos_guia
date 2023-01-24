@@ -5,7 +5,7 @@
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
+      <div id="gitmysql" class="accordion-body">
         Pasos para crear base de datos en consola
 
         <ul>
@@ -54,7 +54,7 @@
             <li>CREATE DATABASE db_sistema; de esta manera creamos la base de datos</li>
             <li>USE db_sistema El USE es para utilizar la base de datos que hemos creado</li>
             <li>Luego procedemos a crear una tabla</li>
-            <li style="color:gray;">
+            <li style="color:rgb(0, 0, 0);">
                 CREATE TABLE usuarios ( <br>
                 id INT NOT NULL AUTO_INCREMENT, <br>
                 nombre VARCHAR(50) NOT NULL, <br>
@@ -69,7 +69,7 @@
             </li>
             <li>luego le ingresamos datos a la tabla de usuarios de esta manera</li>
             <br>
-            <li style="color:gray;">
+            <li style="color:rgb(0, 0, 0);">
                 INSERT INTO usuarios (nombre, edad, email) VALUES ('Oscar', 25,
                 'oscar@gmail.com');<br>
                 INSERT INTO usuarios (nombre, edad, email) VALUES ('Layla', 15,
@@ -87,7 +87,7 @@
             voy a crear crear otra tabla para relacionarla con la tabla usuarios
             usando claves foráneas
         </p>
-        <p style="color:gray;">
+        <p style="color:rgb(0, 0, 0);">
             CREATE TABLE productos <br>
             ( <br>
             id INT NOT NULL AUTO_INCREMENT, <br>
