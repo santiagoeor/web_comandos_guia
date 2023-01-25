@@ -2,6 +2,18 @@ body{
     background-color: aqua;
 }
 
+#git{
+    background-color: rgb(0, 102, 255);
+}
+
+#mysqls{
+    background-color: rgb(43, 174, 226);
+}
+
+#angulars{
+    background-color: aquamarine;
+}
+
 #gitmysql{
     background-color: rgb(0, 200, 255);
 }
