@@ -1,13 +1,48 @@
 <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button id="angulars" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Angular
-      </button><!-- id pal color del button-->
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div id="gitmysql" class="accordion-body"> <!-- color de fondo-->
-        Angular y tscript
+  <h2 class="accordion-header" id="flush-headingThree">
+    <button id="angulars" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+      Angular
+    </button><!-- id pal color del button-->
+  </h2>
+  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+    data-bs-parent="#accordionFlushExample">
+    <div id="gitmysql" class="accordion-body"> <!-- color de fondo-->
+      Comandos del Angular cli<br>
+      <ol>
+        Con este comando instalamos angular utilizando npm
+        <li><b>npm install -g @angular/cli</b></li>
 
-      </div>
+        Comando pa crear un proyecto en angular
+        <li><b>ng new nombdelProyect</b></li>
+
+        Para generar un puerto para verlo en le navegador hacemos esto
+        <li><b>ng serve</b> si no arranca hacemos un <b>npm install</b> y volvemos a intentar</li><br>
+
+        Comando para crear modulos
+        <li><b>ng g m nombredelmodulo</b></li>
+
+        <p>Comando pa crear componentes c significa componente, y s servicios</p>
+        Comando para crear un Componente
+        <li><b>ng g c pages/paises</b></li>
+
+        Comando para crear Servicios
+        <li><b>ng g s pages/paises</b></li>
+
+        tambien podemos decirle que nos cree una carpeta service, para no crearla manualmente eje:
+        <li><b>ng g s gifs/services/gifs</b></li>
+
+        Comando para las rutas
+        <li><b>ng g m AppRouting --flat</b></li>
+
+        De esta manera integramos pwa a angular
+        <li><b>ng add @angular/pwa</b></li>
+
+        Para llevar la aplicacion a producion hacemos esto
+        <li><b>ng build --configuration production</b></li>
+        
+      </ol>
+
     </div>
   </div>
+</div>
