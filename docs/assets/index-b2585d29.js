@@ -1,6 +1,6 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))i(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const o of a.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function l(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerpolicy&&(a.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?a.credentials="include":r.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(r){if(r.ep)return;r.ep=!0;const a=l(r);fetch(r.href,a)}})();const s=`<div class="accordion-item">\r
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))l(a);new MutationObserver(a=>{for(const e of a)if(e.type==="childList")for(const o of e.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&l(o)}).observe(document,{childList:!0,subtree:!0});function i(a){const e={};return a.integrity&&(e.integrity=a.integrity),a.referrerpolicy&&(e.referrerPolicy=a.referrerpolicy),a.crossorigin==="use-credentials"?e.credentials="include":a.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function l(a){if(a.ep)return;a.ep=!0;const e=i(a);fetch(a.href,e)}})();const s=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingOne">\r
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">\r
+      <button id="git" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">\r
         GitHub\r
       </button>\r
     </h2>\r
@@ -113,9 +113,9 @@
 \r
       </div>\r
     </div>\r
-  </div>`,t=n=>{(()=>{const e=document.createElement("div");e.innerHTML=s,document.querySelector(n).append(e)})()},c=`<div class="accordion-item">\r
+  </div>`,t=n=>{(()=>{const r=document.createElement("div");r.innerHTML=s,document.querySelector(n).append(r)})()},c=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingTwo">\r
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">\r
+      <button id="mysqls" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">\r
         Mysql\r
       </button>\r
     </h2>\r
@@ -128,7 +128,7 @@
             <li>\r
                 Nos vamos a ir donde está ubicado la carpeta de MySQL que generalmente la\r
                 podemos encontrar en esta ruta si tenemos instalado el\r
-                AppServ que es un servidor local\r
+               <a href="https://www.appserv.org/en/" target="_blank">AppServ</a>, <a href="https://www.apachefriends.org/download.html" target="_blank">XAMPP</a> que es un servidor local\r
             </li>\r
             C:\\AppServ\\MySQL\\bin\r
         </ul>\r
@@ -216,4 +216,71 @@
 \r
       </div>\r
     </div>\r
-  </div>`,d=n=>{(()=>{const e=document.createElement("div");e.innerHTML=c,document.querySelector(n).append(e)})()};t("#gitHub");d("#mysql");
+  </div>`,d=n=>{(()=>{const r=document.createElement("div");r.innerHTML=c,document.querySelector(n).append(r)})()},b=`<div class="accordion-item">\r
+  <h2 class="accordion-header" id="flush-headingThree">\r
+    <button id="angulars" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"\r
+      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">\r
+      Angular\r
+    </button><!-- id pal color del button-->\r
+  </h2>\r
+  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"\r
+    data-bs-parent="#accordionFlushExample">\r
+    <div id="gitmysql" class="accordion-body"> <!-- color de fondo-->\r
+      Comandos del Angular cli<br>\r
+      <ol>\r
+        Con este comando instalamos angular utilizando npm\r
+        <li><b>npm install -g @angular/cli</b></li>\r
+\r
+        Comando pa crear un proyecto en angular\r
+        <li><b>ng new nombdelProyect</b></li>\r
+\r
+        Para generar un puerto para verlo en le navegador hacemos esto\r
+        <li><b>ng serve</b> si no arranca hacemos un <b>npm install</b> y volvemos a intentar</li><br>\r
+\r
+        Comando para crear modulos\r
+        <li><b>ng g m nombredelmodulo</b></li>\r
+\r
+        <p>Comando pa crear componentes c significa componente, y s servicios</p>\r
+        Comando para crear un Componente\r
+        <li><b>ng g c pages/paises</b></li>\r
+\r
+        Comando para crear Servicios\r
+        <li><b>ng g s pages/paises</b></li>\r
+\r
+        tambien podemos decirle que nos cree una carpeta service, para no crearla manualmente eje:\r
+        <li><b>ng g s gifs/services/gifs</b></li>\r
+\r
+        Comando para las rutas\r
+        <li><b>ng g m AppRouting --flat</b></li>\r
+\r
+        De esta manera integramos pwa a angular\r
+        <li><b>ng add @angular/pwa</b></li>\r
+\r
+        Para llevar la aplicacion a producion hacemos esto\r
+        <li><b>ng build --configuration production</b></li>\r
+        \r
+      </ol>\r
+\r
+    </div>\r
+  </div>\r
+</div>`,u=n=>{(()=>{const r=document.createElement("div");r.innerHTML=b,document.querySelector(n).append(r)})()},p=`<div class="accordion-item">\r
+    <h2 class="accordion-header" id="flush-headingFour">\r
+      <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">\r
+       Comandos Vite\r
+      </button>\r
+    </h2>\r
+    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">\r
+      <div id="gitmysql" class="accordion-body">\r
+        \r
+        <ol>\r
+            <li><b>npm create vite</b></li>\r
+            vamos al proyecto\r
+            <li><b>npm install</b></li>\r
+            <li><b>npm run dev</b></li>\r
+            Para generar el proyecto pa produción\r
+            <li><b>npm run build</b></li>\r
+        </ol>\r
+\r
+      </div>\r
+    </div>\r
+  </div>`,m=n=>{(()=>{const r=document.createElement("div");r.innerHTML=p,document.querySelector(n).append(r)})()};t("#gitHub");d("#mysql");m("#vite");u("#angular");
