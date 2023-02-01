@@ -1,7 +1,7 @@
-(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))l(a);new MutationObserver(a=>{for(const e of a)if(e.type==="childList")for(const o of e.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&l(o)}).observe(document,{childList:!0,subtree:!0});function i(a){const e={};return a.integrity&&(e.integrity=a.integrity),a.referrerpolicy&&(e.referrerPolicy=a.referrerpolicy),a.crossorigin==="use-credentials"?e.credentials="include":a.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function l(a){if(a.ep)return;a.ep=!0;const e=i(a);fetch(a.href,e)}})();const s=`<div class="accordion-item">\r
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))o(r);new MutationObserver(r=>{for(const e of r)if(e.type==="childList")for(const l of e.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&o(l)}).observe(document,{childList:!0,subtree:!0});function i(r){const e={};return r.integrity&&(e.integrity=r.integrity),r.referrerpolicy&&(e.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?e.credentials="include":r.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function o(r){if(r.ep)return;r.ep=!0;const e=i(r);fetch(r.href,e)}})();const s=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingOne">\r
       <button id="git" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">\r
-        GitHub\r
+        <b>GitHub</b>\r
       </button>\r
     </h2>\r
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">\r
@@ -113,7 +113,7 @@
 \r
       </div>\r
     </div>\r
-  </div>`,t=n=>{(()=>{const r=document.createElement("div");r.innerHTML=s,document.querySelector(n).append(r)})()},c=`<div class="accordion-item">\r
+  </div>`,t=n=>{(()=>{const a=document.createElement("div");a.innerHTML=s,document.querySelector(n).append(a)})()},c=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingTwo">\r
       <button id="mysqls" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">\r
         Mysql\r
@@ -216,7 +216,7 @@
 \r
       </div>\r
     </div>\r
-  </div>`,d=n=>{(()=>{const r=document.createElement("div");r.innerHTML=c,document.querySelector(n).append(r)})()},b=`<div class="accordion-item">\r
+  </div>`,d=n=>{(()=>{const a=document.createElement("div");a.innerHTML=c,document.querySelector(n).append(a)})()},b=`<div class="accordion-item">\r
   <h2 class="accordion-header" id="flush-headingThree">\r
     <button id="angulars" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"\r
       data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">\r
@@ -263,7 +263,7 @@
 \r
     </div>\r
   </div>\r
-</div>`,u=n=>{(()=>{const r=document.createElement("div");r.innerHTML=b,document.querySelector(n).append(r)})()},p=`<div class="accordion-item">\r
+</div>`,u=n=>{(()=>{const a=document.createElement("div");a.innerHTML=b,document.querySelector(n).append(a)})()},p=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingFour">\r
       <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">\r
        Comandos Vite\r
@@ -283,4 +283,49 @@
 \r
       </div>\r
     </div>\r
-  </div>`,m=n=>{(()=>{const r=document.createElement("div");r.innerHTML=p,document.querySelector(n).append(r)})()};t("#gitHub");d("#mysql");m("#vite");u("#angular");
+  </div>`,m=n=>{(()=>{const a=document.createElement("div");a.innerHTML=p,document.querySelector(n).append(a)})()},g=`<div class="accordion-item">\r
+    <h2 class="accordion-header" id="flush-headingVscode">\r
+      <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseVscode" aria-expanded="false" aria-controls="flush-collapseVscode">\r
+       Comandos vscode\r
+      </button>\r
+    </h2>\r
+    <div id="flush-collapseVscode" class="accordion-collapse collapse" aria-labelledby="flush-headingVscode" data-bs-parent="#accordionFlushExample">\r
+      <div id="vscodes" class="accordion-body">\r
+        \r
+        <ul>\r
+            <li><b>ctrl + c</b> pa copiar la linea actual</li>\r
+            <li><b>ctrl + x</b> pa cortar la linea actual</li>\r
+            <li><b>alt + flecha arriba o abajo</b> para desplazar una linea</li>\r
+            <li><b>ctrl + shift + k</b> pa eliminar la linea actual</li>\r
+            <li><b>shift + alt  + flecha abajo o arriba</b> pa duplicar la linea actua</li>\r
+            <li><b>alt + flecha abajo o arriba</b> pa subir o bajar un linea, o tambien podemos<br>\r
+                señalar varias lineas\r
+            </li>\r
+            <li><b>ctrl + alt flecha arriba o abajo</b> para tener varios cursores</li>\r
+            <li><b>shit + alt flecha derecha</b> para señalar lo que hay escrito hacia delante</li>\r
+            <li><b>ctrl cierra llave</b> pa comentarios</li>\r
+            <li><b>ctrl + u</b> pa quitar comentarios</li>\r
+            <li><b>ctrl + n</b> pa nuevo archivo</li>\r
+            <li><b>ctrl + y</b> pa rehacer</li>\r
+            <li><b>ctrl + k</b> y ctlr + o  para abrir una carpeta</li>\r
+            <li><b>ctrl + r</b> para abrir el historial de proyectos recientes</li>\r
+            <li><b>ctrl + shift + E</b> para abrir el arbol de directorios</li>\r
+            <li><b>ctrl + b</b> pa cerrar el arbol de directorios</li>\r
+            <br>\r
+            <li><b>shift + Fn + f10</b> click izquierdo</li>\r
+            <li><b>shift + f10</b> pa Hp</li>\r
+            <br>\r
+            <li><b>Fn +  f2</b> para renombrar en el arbol de directorio</li>\r
+            <li><b>Fn + Alt + F12</b> para andar entre funciones</li>\r
+            <li><b>shift + Alt + A</b> para comentar solo lo que selecionamos</li>\r
+            <li><b>ctrl + shif + L</b> para selecionar una palabra y copiarla</li>\r
+            <li><b>Fn + F2</b> para solo cambiar el nombre en un solo lugar, se cambia\r
+                <br>automaticamente donde lo este utilizando.\r
+            </li>\r
+            <li><b>ctrl + shif + v</b> para previsualizar el archivo readme.md</li>\r
+            <li><b>ctrl + k + z</b> para modo concentración y pa salir es con el Esc.</li>\r
+        </ul>\r
+\r
+      </div>\r
+    </div>\r
+  </div>`,h=n=>{(()=>{const a=document.createElement("div");a.innerHTML=g,document.querySelector(n).append(a)})()};t("#gitHub");d("#mysql");m("#vite");u("#angular");h("#vscode");
