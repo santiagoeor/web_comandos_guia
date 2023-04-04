@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))o(r);new MutationObserver(r=>{for(const e of r)if(e.type==="childList")for(const l of e.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&o(l)}).observe(document,{childList:!0,subtree:!0});function i(r){const e={};return r.integrity&&(e.integrity=r.integrity),r.referrerpolicy&&(e.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?e.credentials="include":r.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function o(r){if(r.ep)return;r.ep=!0;const e=i(r);fetch(r.href,e)}})();const s=`<div class="accordion-item">\r
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))l(r);new MutationObserver(r=>{for(const e of r)if(e.type==="childList")for(const o of e.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&l(o)}).observe(document,{childList:!0,subtree:!0});function i(r){const e={};return r.integrity&&(e.integrity=r.integrity),r.referrerpolicy&&(e.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?e.credentials="include":r.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function l(r){if(r.ep)return;r.ep=!0;const e=i(r);fetch(r.href,e)}})();const s=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingOne">\r
       <button id="git" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">\r
         <b>GitHub</b>\r
@@ -52,6 +52,8 @@
           </li>\r
           <li><b>git commit -m "comentario" </b> es para escribirle un comentario sobre el cambio que\r
               vamos a subir</li>\r
+        <li><b>git commit --amend</b>es para corregir el ultimo commit</li>\r
+          <li><b>git commit -am "comentario" </b>poniendo am no hay que poner el git add .</li>\r
           <li><b>git checkout -- . </b> es para devolver el proyecto al último commit que hicimos Para\r
               subirlo a github hay que crear un repositorio <br>\r
               en github y copiar el antepenultimo codigo eje:</li>\r
@@ -252,6 +254,9 @@
 \r
         Comando para las rutas\r
         <li><b>ng g m AppRouting --flat</b></li>\r
+\r
+        Comando para crear pipes\r
+        <li><b>ng g pipe ventas/pipe/ordenar</b></li>\r
 \r
         De esta manera integramos pwa a angular\r
         <li><b>ng add @angular/pwa</b></li>\r
