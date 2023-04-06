@@ -239,8 +239,13 @@
         Para generar un puerto para verlo en le navegador hacemos esto\r
         <li><b>ng serve</b> si no arranca hacemos un <b>npm install</b> y volvemos a intentar</li><br>\r
 \r
+        \r
         Comando para crear modulos\r
         <li><b>ng g m nombredelmodulo</b></li>\r
+        \r
+        Al poner esto al final pa que no se nos cree el archivo de pruebas y de styles, cuando<br>\r
+        creamos un componente\r
+        <li><b>ng g c page/ejemplo --skip-tests -s</b></li>\r
 \r
         <p>Comando pa crear componentes c significa componente, y s servicios</p>\r
         Comando para crear un Componente\r
@@ -268,7 +273,7 @@
 \r
     </div>\r
   </div>\r
-</div>`,u=n=>{(()=>{const a=document.createElement("div");a.innerHTML=b,document.querySelector(n).append(a)})()},p=`<div class="accordion-item">\r
+</div>`,p=n=>{(()=>{const a=document.createElement("div");a.innerHTML=b,document.querySelector(n).append(a)})()},u=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingFour">\r
       <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">\r
        Comandos Vite\r
@@ -288,7 +293,7 @@
 \r
       </div>\r
     </div>\r
-  </div>`,m=n=>{(()=>{const a=document.createElement("div");a.innerHTML=p,document.querySelector(n).append(a)})()},g=`<div class="accordion-item">\r
+  </div>`,m=n=>{(()=>{const a=document.createElement("div");a.innerHTML=u,document.querySelector(n).append(a)})()},g=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingVscode">\r
       <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseVscode" aria-expanded="false" aria-controls="flush-collapseVscode">\r
        Comandos vscode\r
@@ -333,4 +338,4 @@
 \r
       </div>\r
     </div>\r
-  </div>`,h=n=>{(()=>{const a=document.createElement("div");a.innerHTML=g,document.querySelector(n).append(a)})()};t("#gitHub");d("#mysql");m("#vite");u("#angular");h("#vscode");
+  </div>`,h=n=>{(()=>{const a=document.createElement("div");a.innerHTML=g,document.querySelector(n).append(a)})()};t("#gitHub");d("#mysql");m("#vite");p("#angular");h("#vscode");
