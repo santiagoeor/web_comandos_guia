@@ -251,6 +251,9 @@
         Comando para crear un Componente\r
         <li><b>ng g c pages/paises</b></li>\r
 \r
+        comamdo pa crear un standalone component\r
+        <li><b>ng g c pages/paises --standalone</b></li>\r
+\r
         Comando para crear Servicios\r
         <li><b>ng g s pages/paises</b></li>\r
 \r
