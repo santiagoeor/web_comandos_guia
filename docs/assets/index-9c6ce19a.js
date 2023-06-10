@@ -43,8 +43,16 @@
           <br>\r
           <li><b>git init </b> es para inicializar el proyecto dentro de git</li>\r
           <li><b>git status </b> es para ver si hay cambios por subir</li>\r
+          <li><b>git config --global alias.s "status" </b>Con esto ponemos un alias a los comandos de git este caso puse s para el status \r
+        y ya solo es git s para ejecutarlo</li>\r
+        <li><a href="https://gist.github.com/Klerith/0acf18bbece7923bcac55edb71b03c2b">Aqui dejo dos opciones personalizadas</a></li>\r
           <li><b>git add . </b> es para subir los cambios</li>\r
           <li><b>git reset . </b> es para bajar los cambio de la zona de staing</li>\r
+          <li><b>git add index.html style.css </b> es para subir solo los archivos que le especifiquemos</li>\r
+          <li><b>git reset index.html style.css </b> es para bajar los cambio de la zona de staing</li>\r
+          <li><b>git add *.html </b> es para solo subir al status solo archivos con la extención que le indiquemos </li>\r
+          <li><b>git add views/*.html </b> especificamos si esta en una carpeta y la extención</li>\r
+          <li><b>git add views </b> También le podemos indicar que coja todos los archivos y subcarpetas de una carpeta</li>\r
           <li>\r
               <b>git log </b>\r
               es para los comentarios de los cambios que ha hecho las otras personas, para salir de la\r
@@ -276,7 +284,7 @@
 \r
     </div>\r
   </div>\r
-</div>`,p=n=>{(()=>{const a=document.createElement("div");a.innerHTML=b,document.querySelector(n).append(a)})()},u=`<div class="accordion-item">\r
+</div>`,u=n=>{(()=>{const a=document.createElement("div");a.innerHTML=b,document.querySelector(n).append(a)})()},p=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingFour">\r
       <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">\r
        Comandos Vite\r
@@ -296,7 +304,7 @@
 \r
       </div>\r
     </div>\r
-  </div>`,m=n=>{(()=>{const a=document.createElement("div");a.innerHTML=u,document.querySelector(n).append(a)})()},g=`<div class="accordion-item">\r
+  </div>`,m=n=>{(()=>{const a=document.createElement("div");a.innerHTML=p,document.querySelector(n).append(a)})()},g=`<div class="accordion-item">\r
     <h2 class="accordion-header" id="flush-headingVscode">\r
       <button id="vite" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseVscode" aria-expanded="false" aria-controls="flush-collapseVscode">\r
        Comandos vscode\r
@@ -341,4 +349,4 @@
 \r
       </div>\r
     </div>\r
-  </div>`,h=n=>{(()=>{const a=document.createElement("div");a.innerHTML=g,document.querySelector(n).append(a)})()};t("#gitHub");d("#mysql");m("#vite");p("#angular");h("#vscode");
+  </div>`,h=n=>{(()=>{const a=document.createElement("div");a.innerHTML=g,document.querySelector(n).append(a)})()};t("#gitHub");d("#mysql");m("#vite");u("#angular");h("#vscode");
