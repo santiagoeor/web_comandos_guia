@@ -14,7 +14,7 @@
       </p>\r
       <ul>\r
           <li>vamos a abrir Git Bash y ejecutar los siguientes comandos en consola de git bash.</li>\r
-          <li>git config --global user.email "aquí va tu nombre"</li>\r
+          <li>git config --global user.name "aquí va tu nombre"</li>\r
           <li>git config --global user.email ejemplo@gmail.com</li>\r
           <br>\r
           <p>los dos comandos que siguen son pa los que les gusta vscode, los que no utilizan vscode\r
