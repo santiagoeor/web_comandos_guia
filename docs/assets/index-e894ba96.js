@@ -16,6 +16,7 @@
           <li>vamos a abrir Git Bash y ejecutar los siguientes comandos en consola de git bash.</li>\r
           <li>git config --global user.name "aquí va tu nombre"</li>\r
           <li>git config --global user.email ejemplo@gmail.com</li>\r
+          <li>git config --global pull.rebase true</li>\r
           <br>\r
           <p>los dos comandos que siguen son pa los que les gusta vscode, los que no utilizan vscode\r
               pueden seguir con la<br>\r
@@ -119,6 +120,15 @@
           <li><b>git branch -d nombre.de.la.rama</b></li>\r
           <p>para clonar una rama especifica de nuestro repositorio utilizamos el siguiente comando en consola</p>\r
           <li><b>git clone https://github.com/equipo/backen.git -b rama --single-branch </b></li>\r
+      </ul>\r
+\r
+      <h5><b>Crear stash, y hacer rebase interativo pa modificar commits</b></h5>\r
+      <ul>\r
+        <li><b>git stash</b> es para guardar los cambios sin haber realizado un commit, y nos devuelve al ultimo commit</li>\r
+        <li><b>git stash pop</b> con este devolvemos nuestro proyecto al stash</li>\r
+        <li><b>git stash clear</b>es para borrar todos los stash</li>\r
+        <li>este comando de git que sirve es recomandeble no hacerlo si los commits ya estan en un repositorio de GitHub.</li>\r
+        <li><b>git rebase -i HEAD~4</b>esto trae los ultimos 4 commits y los podemos unir o modificar</li>\r
       </ul>\r
 \r
       </div>\r
