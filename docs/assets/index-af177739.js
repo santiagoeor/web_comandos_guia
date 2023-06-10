@@ -30,6 +30,7 @@
               con los siguientes comandos.\r
           </li>\r
           <li>git config --global core.autocrlf true</li>\r
+          <li>git config --global init.defaultBranch main</li>\r
       </ul>\r
 \r
       <h5 align="center">Ahora van los comandos pa poderlo utilizar</h5>\r
@@ -59,7 +60,6 @@
               en github y copiar el antepenultimo codigo eje:</li>\r
           <li>git remote add origin https://github.com/equipo/ejemplo.git</li>\r
           <li><b>git push -u origin main </b></li>\r
-          <p>Recuerda cambiar el main por master</p>\r
           <p>\r
               despues de subir el proyecto ya lo unico que tendrias que hacer es darle clik contrario\r
               a la carpeta del proyecto y selecionar la<br>\r
