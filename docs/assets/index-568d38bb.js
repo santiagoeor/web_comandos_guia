@@ -120,6 +120,9 @@
           <li><b>git branch -d nombre.de.la.rama</b></li>\r
           <p>para clonar una rama especifica de nuestro repositorio utilizamos el siguiente comando en consola</p>\r
           <li><b>git clone https://github.com/equipo/backen.git -b rama --single-branch </b></li>\r
+          <li><b>git pull --all</b></li>\r
+          <li><b>git branch -a </b> para listar las ramas de GitHub</li>\r
+          <li><b>git remote prune origin </b>Esto elimina las ramas que no estemos utilizandoen gitHub</li>\r
       </ul>\r
 \r
       <h5><b>Crear stash, y hacer rebase interativo pa modificar commits</b></h5>\r
