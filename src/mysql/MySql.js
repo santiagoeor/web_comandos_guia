@@ -1,11 +1,29 @@
-<div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button id="mysqls" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Mysql
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div id="gitmysql" class="accordion-body">
+class MySql extends HTMLElement {
+
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    static get styles() {
+        return /*css*/`
+        :host{
+        }
+
+        ul{
+            background-color: rgb(75, 181, 227);
+        }
+        `
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = /*html*/`
+        <style>${MySql.styles}</style>
+        <h1>MYSQL</h1>
         Pasos para crear base de datos en consola
 
         <ul>
@@ -98,7 +116,9 @@
             FOREIGN KEY(create_by) REFERENCE usuarios(id) <br>
             ); <br>
         </p>
+         `
+    }
 
-      </div>
-    </div>
-  </div>
+}
+
+customElements.define('my-sql', MySql);

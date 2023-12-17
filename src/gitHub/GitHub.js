@@ -1,11 +1,29 @@
-<div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button id="git" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        <b>GitHub</b>
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div id="gitmysql" class="accordion-body">
+class GitHub extends HTMLElement {
+
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    static get styles() {
+        return /*css*/`
+        :host{
+        }
+
+        ul{
+            background-color: rgb(75, 181, 227);
+        }
+        `
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = /*html*/`
+        <style>${GitHub.styles}</style>
+        <h1>GITHUB</h1>
         <p>
           Para trabajar con Git, primero debemos descargarlo en el siguiente enlace <a href="https://git-scm.com/downloads" target="_blank">gitHub</a>
           y también vscode <a href="https://code.visualstudio.com/insiders/" target="_blank">Download</a> <br>
@@ -133,7 +151,9 @@
         <li>este comando de git que sirve es recomandeble no hacerlo si los commits ya estan en un repositorio de GitHub.</li>
         <li><b>git rebase -i HEAD~4</b>esto trae los ultimos 4 commits y los podemos unir o modificar</li>
       </ul>
+         `
+    }
 
-      </div>
-    </div>
-  </div>
+}
+
+customElements.define('git-hub', GitHub);

@@ -1,14 +1,7 @@
+import './src/angular/AngularCommands.js';
+import './src/gitHub/GitHub.js';
+import './src/mysql/MySql.js';
+import './src/visualStudioCode/VisualStudioCode.js';
+import './src/vite/ViteCommands.js';
 import './style.css';
-
-import { appGit, appMysql, appVite,appAngular, appVscode } from './src/puente';
-
-appGit('#gitHub');
-
-appMysql('#mysql');
-
-appVite('#vite');
-
-appAngular('#angular');
-
-appVscode('#vscode');
 
