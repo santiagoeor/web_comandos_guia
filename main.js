@@ -1,4 +1,5 @@
 import './src/angular/AngularCommands.js';
+import './src/components/BestMenu.js';
 import './src/gitHub/GitHub.js';
 import './src/mysql/MySql.js';
 import './src/visualStudioCode/VisualStudioCode.js';
