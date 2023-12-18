@@ -10,8 +10,8 @@ class GitHub extends HTMLElement {
         :host{
         }
 
-        ul{
-            background-color: rgb(75, 181, 227);
+        #fondo{
+            background-color: #0d6efd;
         }
         `
     }
@@ -23,6 +23,7 @@ class GitHub extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = /*html*/`
         <style>${GitHub.styles}</style>
+        <div id="fondo">
         <h1>GITHUB</h1>
         <p>
           Para trabajar con Git, primero debemos descargarlo en el siguiente enlace <a href="https://git-scm.com/downloads" target="_blank">gitHub</a>
@@ -147,10 +148,11 @@ class GitHub extends HTMLElement {
       <ul>
         <li><b>git stash</b> es para guardar los cambios sin haber realizado un commit, y nos devuelve al ultimo commit</li>
         <li><b>git stash pop</b> con este devolvemos nuestro proyecto al stash</li>
-        <li><b>git stash clear</b>es para borrar todos los stash</li>
+        <li><b>git stash clear</b> es para borrar todos los stash</li>
         <li>este comando de git que sirve es recomandeble no hacerlo si los commits ya estan en un repositorio de GitHub.</li>
-        <li><b>git rebase -i HEAD~4</b>esto trae los ultimos 4 commits y los podemos unir o modificar</li>
+        <li><b>git rebase -i HEAD~4</b> esto trae los ultimos 4 commits y los podemos unir o modificar</li>
       </ul>
+      </div>
          `
     }
 

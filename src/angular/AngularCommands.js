@@ -10,8 +10,8 @@ class AngularCommands extends HTMLElement {
         :host{
         }
 
-        ol{
-            background-color: rgb(75, 181, 227);
+        #fondo{
+            background-color: #dc3545;
         }
         `
     }
@@ -23,6 +23,7 @@ class AngularCommands extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = /*html*/`
         <style>${AngularCommands.styles}</style>
+        <div id="fondo">
         <h1>Angular</h1> 
         Comandos del Angular cli<br>
       <ol>
@@ -69,6 +70,7 @@ class AngularCommands extends HTMLElement {
         <li><b>ng build --configuration production</b></li>
         
       </ol>
+      </div>
          `
     }
 

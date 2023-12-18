@@ -10,8 +10,8 @@ class ViteComandos extends HTMLElement {
         :host{
         }
 
-        ol{
-            background-color: rgb(75, 181, 227);
+        #fondo{
+            background-color: #ffca2c;
         }
         `
     }
@@ -23,6 +23,7 @@ class ViteComandos extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = /*html*/`
         <style>${ViteComandos.styles}</style>
+        <div id="fondo">
         <h1>Vite</h1>
         <ol>
             <li><b>npm create vite</b></li>
@@ -32,6 +33,7 @@ class ViteComandos extends HTMLElement {
             Para generar el proyecto pa produción
             <li><b>npm run build</b></li>
         </ol>
+        </div>
          `
     }
 

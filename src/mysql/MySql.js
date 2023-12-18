@@ -10,8 +10,8 @@ class MySql extends HTMLElement {
         :host{
         }
 
-        ul{
-            background-color: rgb(75, 181, 227);
+        #fondo{
+            background-color: #5c636a;
         }
         `
     }
@@ -23,6 +23,7 @@ class MySql extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = /*html*/`
         <style>${MySql.styles}</style>
+        <div id="fondo">
         <h1>MYSQL</h1>
         Pasos para crear base de datos en consola
 
@@ -116,6 +117,7 @@ class MySql extends HTMLElement {
             FOREIGN KEY(create_by) REFERENCE usuarios(id) <br>
             ); <br>
         </p>
+        </div>
          `
     }
 

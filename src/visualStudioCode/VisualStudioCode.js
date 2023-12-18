@@ -1,30 +1,31 @@
 class VisualStudioCode extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: "open" });
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
 
-    static get styles() {
-        return /*css*/`
+  static get styles() {
+    return /*css*/`
         :host{
         }
 
-        ul{
-            background-color: rgb(75, 181, 227);
+        #fondo{
+          background-color: #0dcaf0;
         }
         `;
-    }
+  }
 
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
+  render() {
 
-        this.shadowRoot.innerHTML = /*html*/`
+    this.shadowRoot.innerHTML = /*html*/`
         <style>${VisualStudioCode.styles}</style>
+        <div id="fondo">
+        <h1>VSCODE</h1>
         <ul>
-          <h1>VSCODE</h1>
         <li><b>ctrl + c</b> pa copiar la linea actual</li>
         <li><b>ctrl + x</b> pa cortar la linea actual</li>
         <li><b>alt + flecha arriba o abajo</b> para desplazar una linea</li>
@@ -57,9 +58,10 @@ class VisualStudioCode extends HTMLElement {
         <li><b>ctrl + shif + v</b> para previsualizar el archivo readme.md</li>
         <li><b>ctrl + k + z</b> para modo concentración y pa salir es con el Esc.</li>
       </ul>
+      </div>
         `;
 
-    }
+  }
 }
 
 customElements.define('visual-studio-code', VisualStudioCode);
