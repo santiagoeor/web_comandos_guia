@@ -40,9 +40,9 @@ class GitHub extends HTMLElement {
         this.shadowRoot.innerHTML = /*html*/`
         <style>${GitHub.styles}</style>
         <div id="fondo">
-        <h1>GITHUB</h1>
+        <h1>GIT Y GITHUB</h1>
         <p>
-          Para trabajar con Git, primero debemos descargarlo en el siguiente enlace <a href="https://git-scm.com/downloads" target="_blank">gitHub</a>
+          Para trabajar con Git, primero debemos descargarlo en el siguiente enlace <a href="https://git-scm.com/downloads" target="_blank">git</a>
           y también vscode <a href="https://code.visualstudio.com/insiders/" target="_blank">Download</a> <br>
           Visual Studio Code - Mac, Linux, Windows o su editor preferido.<br><br>
           El siguiente paso es configurarlo para trabajar con él.
@@ -81,7 +81,7 @@ class GitHub extends HTMLElement {
           <li><b>git status </b> es para ver si hay cambios por subir</li>
           <li><b>git config --global alias.s "status" </b>Con esto ponemos un alias a los comandos de git este caso puse s para el status 
         y ya solo es git s para ejecutarlo</li>
-        <li><a href="https://gist.github.com/Klerith/0acf18bbece7923bcac55edb71b03c2b">Aqui dejo dos opciones personalizadas</a></li>
+        <li><a href="https://gist.github.com/Klerith/0acf18bbece7923bcac55edb71b03c2b" target="_blank">Aqui dejo dos opciones personalizadas</a></li>
           <li><b>git add . </b> es para subir los cambios</li>
           <li><b>git reset . </b> es para bajar los cambio de la zona de staing</li>
           <li><b>git add index.html style.css </b> es para subir solo los archivos que le especifiquemos</li>
@@ -97,7 +97,7 @@ class GitHub extends HTMLElement {
           </li>
           <li><b>git commit -m "comentario" </b> es para escribirle un comentario sobre el cambio que
               vamos a subir</li>
-        <li><b>git commit --amend</b>es para corregir el ultimo commit</li>
+        <li><b>git commit --amend</b> es para corregir el ultimo commit</li>
           <li><b>git commit -am "comentario" </b>poniendo am no hay que poner el git add .</li>
           <li><b>git checkout -- . </b> es para devolver el proyecto al último commit que hicimos Para
               subirlo a github hay que crear un repositorio <br>
@@ -121,7 +121,7 @@ class GitHub extends HTMLElement {
               para clonar repositorio<br><br>
 
               puedes darle clik contrario a la carpeta donde queremos guradar el proyecto en
-              nuestro<br>
+              mi<br>
               caso www y luego le damos en la opcion abrir con Git Bash Here
           </p>
           <li><b>git clone https://github.com/equipo/Proyecto.git</b></li>

@@ -54,6 +54,8 @@ class VisualStudioCode extends HTMLElement {
         <li><b>ctrl + r</b> para abrir el historial de proyectos recientes</li>
         <li><b>ctrl + shift + E</b> para abrir el arbol de directorios</li>
         <li><b>ctrl + b</b> pa cerrar el arbol de directorios</li>
+        <li><b>ctrl + f</b> para buscar una palabra en el archivo</li>
+        <li><b>ctrl + p</b> para buscar un archivo del proyecto</li>
         <br>
         <li><b>shift + Fn + f10</b> click izquierdo</li>
         <li><b>shift + f10</b> pa Hp</li>

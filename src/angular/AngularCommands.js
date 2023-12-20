@@ -77,7 +77,7 @@ class AngularCommands extends HTMLElement {
         <li><b>ng add @angular/pwa</b></li>
 
         Para llevar la aplicacion a producion hacemos esto
-        <li><b>ng build --configuration production</b></li>
+        <li><b>ng build</b></li>
         
       </ol>
       </div>
