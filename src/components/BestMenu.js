@@ -12,10 +12,17 @@ class BestMenu extends HTMLElement {
 
         header {
             position: fixed;
-        }
+            top: 0;
+            left: 0;
+            right: 0;
+             /* Ajusta el color de fondo del encabezado si es diferente */
+            padding: 14px; /* Ajusta el espaciado del encabezado */
+            text-align: center; /* Alinea el texto al centro */
+            color: white; /* Ajusta el color del texto del encabezado */
+          }
 
         .btn{
-            padding: 10px 20px;
+            padding: 10px 10px;
             font-size: 16px;
             border: none; /* Sin borde */
             border-radius: 5px; /* Esquinas redondeadas */
@@ -23,7 +30,7 @@ class BestMenu extends HTMLElement {
         }
 
         .btn-primary{            
-            background-color: #0d6efd; /* Color de fondo */
+            background-color: #1f5db8; /* Color de fondo */
             color: white; /* Color del texto */
         }
 
@@ -33,17 +40,17 @@ class BestMenu extends HTMLElement {
         }
 
         .btn-warning{
-            background-color: #ffca2c; /* Color de fondo */
+            background-color: #2fb57f; /* Color de fondo */
             color: white; /* Color del texto */
         }
 
         .btn-danger{
-            background-color: #dc3545; /* Color de fondo */
+            background-color: #5879a4; /* Color de fondo */
             color: white; /* Color del texto */
         }
 
         .btn-info{
-            background-color: #0dcaf0; /* Color de fondo */
+            background-color: #41a3b6; /* Color de fondo */
             color: white; /* Color del texto */
         }
         `

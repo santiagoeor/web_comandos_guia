@@ -8,11 +8,21 @@ class ViteComandos extends HTMLElement {
     static get styles() {
         return /*css*/`
         :host{
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
         }
 
         #fondo{
-            background-color: #ffca2c;
+            background-color: #2fb57f;
+            border-radius: 10px;
+            padding: 20px;
         }
+          
+          ol, li {
+            margin-bottom: 10px;
+          }
         `
     }
 

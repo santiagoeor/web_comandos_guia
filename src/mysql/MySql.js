@@ -8,11 +8,26 @@ class MySql extends HTMLElement {
     static get styles() {
         return /*css*/`
         :host{
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
         }
 
         #fondo{
             background-color: #5c636a;
+            border-radius: 10px;
+            padding: 20px;
         }
+
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+          }
+          
+          ul, li, p {
+            margin-bottom: 10px;
+          }
         `
     }
 

@@ -7,10 +7,20 @@ class VisualStudioCode extends HTMLElement {
   static get styles() {
     return /*css*/`
         :host{
+          display: block;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
         }
 
         #fondo{
-          background-color: #0dcaf0;
+          background-color: #41a3b6;
+          border-radius: 10px;
+          padding: 20px;
+        }
+
+        ul, li{
+          margin-bottom: 10px;
         }
         `;
   }

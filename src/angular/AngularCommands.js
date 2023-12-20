@@ -8,11 +8,21 @@ class AngularCommands extends HTMLElement {
     static get styles() {
         return /*css*/`
         :host{
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
         }
 
         #fondo{
-            background-color: #dc3545;
+            background-color: #5879a4;
+            border-radius: 10px;
+            padding: 20px;
         }
+
+        ol, li {
+            margin-bottom: 10px;
+          }
         `
     }
 
