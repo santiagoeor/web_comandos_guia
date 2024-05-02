@@ -86,7 +86,7 @@ class MySql extends HTMLElement {
             <br>
             <li>SHOW DATABASES; es para listar las bases de datos que tenemos creadas</li>
             <li>CREATE DATABASE db_sistema; de esta manera creamos la base de datos</li>
-            <li>USE db_sistema El USE es para utilizar la base de datos que hemos creado</li>
+            <li>USE db_sistema; El USE es para utilizar la base de datos que hemos creado</li>
             <li>Luego procedemos a crear una tabla</li>
             <li style="color:rgb(0, 0, 0);">
                 CREATE TABLE usuarios ( <br>
@@ -126,12 +126,21 @@ class MySql extends HTMLElement {
             ( <br>
             id INT NOT NULL AUTO_INCREMENT, <br>
             nombre VARCHAR(50) NOT NULL, <br>
-            create_by INT NOT NULL, <br>
+            fk_user INT NOT NULL, <br>
             marca VARCHAR(50) NOT NULL, <br>
             PRIMARY KEY(id), <br>
-            FOREIGN KEY(create_by) REFERENCE usuarios(id) <br>
+            FOREIGN KEY(fk_user) REFERENCES usuarios(id) <br>
             ); <br>
         </p>
+        <p>Vamos ingresar dos registros a la tabla de productos, como fk_user es la clave foranea ponemos el id del usuario que queremos asociar con ese producto</p>
+        <ul>
+            <li>INSERT INTO productos (nombre, fk_user, marca) VALUES('Celular', 2, 'Motorola');</li>
+            <li>INSERT INTO productos (nombre, fk_user, marca) VALUES('Computador', 1, 'Azus');</li>
+        </ul>
+        <p>Vamos consultar los productos ingresados utilizando un Join para unir la tabla de productos y usuarios</p>
+        <ul>
+        <li>SELECT * FROM productos JOIN usuarios ON productos.fk_user = usuarios.id;</li>
+        </ul>
         </div>
          `
     }
