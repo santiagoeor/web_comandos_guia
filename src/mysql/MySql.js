@@ -28,7 +28,12 @@ class MySql extends HTMLElement {
           ul, li, p {
             margin-bottom: 10px;
           }
+
+          .sql{
+              color: #0087fd;
+          }
         `
+
     }
 
     connectedCallback() {
@@ -84,37 +89,37 @@ class MySql extends HTMLElement {
 
         <ol>
             <br>
-            <li>SHOW DATABASES; es para listar las bases de datos que tenemos creadas</li>
-            <li>CREATE DATABASE db_sistema; de esta manera creamos la base de datos</li>
-            <li>USE db_sistema; El USE es para utilizar la base de datos que hemos creado</li>
+            <li><b class="sql">SHOW DATABASES</b>; es para listar las bases de datos que tenemos creadas</li>
+            <li><b class="sql">CREATE DATABASE</b> db_sistema; de esta manera creamos la base de datos</li>
+            <li><b class="sql">USE</b> db_sistema; El USE es para utilizar la base de datos que hemos creado</li>
             <li>Luego procedemos a crear una tabla</li>
             <li style="color:rgb(0, 0, 0);">
-                CREATE TABLE usuarios ( <br>
-                id INT NOT NULL AUTO_INCREMENT, <br>
-                nombre VARCHAR(50) NOT NULL, <br>
-                edad INT NOT NULL, <br>
-                email VARCHAR(100) NOT NULL, <br>
-                PRIMARY KEY (id) <br>
-                ); <br>
+            <b class="sql">CREATE TABLE</b> usuarios <b class="sql">(</b> <br>
+                id <b class="sql">INT NOT NULL AUTO_INCREMENT</b>, <br>
+                nombre <b class="sql">VARCHAR(</b>50<b class="sql">) NOT NULL</b>, <br>
+                edad <b class="sql">INT NOT NULL</b>, <br>
+                email <b class="sql">VARCHAR(</b>100<b class="sql">) NOT NULL</b>, <br>
+                <b class="sql">PRIMARY KEY (</b>id<b class="sql">)</b> <br>
+                <b class="sql">)</b>; <br>
             </li>
-            <li>SHOW TABLES; para listar las tablas de la base de datos</li>
+            <li><b class="sql">SHOW TABLES</b>; para listar las tablas de la base de datos</li>
             <li>Ahora acedemos a la tabla de usuarios que creamos</li>
-            <li>EXPLAIN usuarios; De esta manera listamos las columnas de la tabla de usuarios
+            <li><b class="sql">EXPLAIN usuarios</b>; De esta manera listamos las columnas de la tabla de usuarios
             </li>
             <li>luego le ingresamos datos a la tabla de usuarios de esta manera</li>
             <br>
             <li style="color:rgb(0, 0, 0);">
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Oscar', 25,
-                'oscar@gmail.com');<br>
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Layla', 15,
-                'layla@gmail.com');<br>
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Nicolas', 36,
-                'nico@gmail.com');<br>
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Chanchito', 7,
-                'osca@gmail.com');<br>
+            <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Oscar', 25,
+                'oscar@gmail.com'<b class="sql">)</b>;<br>
+                <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Layla', 15,
+                'layla@gmail.com'<b class="sql">)</b>;<br>
+                <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Nicolas', 36,
+                'nico@gmail.com'<b class="sql">)</b>;<br>
+                <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Chanchito', 7,
+                'osca@gmail.com'<b class="sql">)</b>;<br>
             </li>
             <li>Vamos a consultar los datos que acabamos de ingresar</li>
-            <li>SELECT * FROM usuarios;</li>
+            <li><b class="sql">SELECT * FROM</b> usuarios;</li>
         </ol>
         <p>
             Y de esta manera podemos crear las tablas en las base de datos que creemos, Ahora
@@ -122,29 +127,29 @@ class MySql extends HTMLElement {
             usando claves foráneas
         </p>
         <p style="color:rgb(0, 0, 0);">
-            CREATE TABLE productos <br>
-            ( <br>
-            id INT NOT NULL AUTO_INCREMENT, <br>
-            nombre VARCHAR(50) NOT NULL, <br>
-            fk_user INT NOT NULL, <br>
-            marca VARCHAR(50) NOT NULL, <br>
-            PRIMARY KEY(id), <br>
-            FOREIGN KEY(fk_user) REFERENCES usuarios(id) <br>
-            ); <br>
+        <b class="sql">CREATE TABLE</b> productos <br>
+        <b class="sql">(</b> <br>
+            id <b class="sql">INT NOT NULL AUTO_INCREMENT</b>, <br>
+            nombre <b class="sql">VARCHAR(</b>50<b class="sql">) NOT NULL</b>, <br>
+            fk_user <b class="sql">INT NOT NULL</b>, <br>
+            marca <b class="sql">VARCHAR(</b>50<b class="sql">) NOT NULL</b>, <br>
+            <b class="sql">PRIMARY KEY(</b>id<b class="sql">)</b>, <br>
+            <b class="sql">FOREIGN KEY(</b>fk_user<b class="sql">) REFERENCES</b> usuarios<b class="sql">(</b>id<b class="sql">)</b> <br>
+            <b class="sql">)</b>; <br>
         </p>
         <p>Vamos ingresar dos registros a la tabla de productos, como fk_user es la clave foranea ponemos el id del usuario que queremos asociar con ese producto</p>
         <ul>
-            <li>INSERT INTO productos (nombre, fk_user, marca) VALUES('Celular', 2, 'Motorola');</li>
-            <li>INSERT INTO productos (nombre, fk_user, marca) VALUES('Computador', 1, 'Azus');</li>
+            <li><b class="sql">INSERT INTO</b> productos <b class="sql">(</b>nombre, fk_user, marca<b class="sql">) VALUES(</b>'Celular', 2, 'Motorola'<b class="sql">)</b>;</li>
+            <li><b class="sql">INSERT INTO</b> productos <b class="sql">(</b>nombre, fk_user, marca<b class="sql">) VALUES(</b>'Computador', 1, 'Azus'<b class="sql">)</b>;</li>
         </ul>
         <p>Vamos consultar los productos ingresados utilizando un Join para unir la tabla de productos y usuarios</p>
         <ul>
-            <li>SELECT * FROM productos JOIN usuarios ON productos.fk_user = usuarios.id;</li>
+            <li><b class="sql">SELECT * FROM</b> productos <b class="sql">JOIN</b> usuarios <b class="sql">ON</b> productos.fk_user = usuarios.id;</li>
         </ul>
         <p>Ahora vamos a hacer un UPDATE y DELETE a la tabla de usuarios</p>
         <ul>
-            <li>UPDATE usuarios SET nombre='Pablo' WHERE id=4;</li>
-            <li>DELETE FROM usuarios WHERE id=3;</li>
+            <li><b class="sql">UPDATE</b> usuarios <b class="sql">SET</b> nombre='Pablo' <b class="sql">WHERE</b> id=4;</li>
+            <li><b class="sql">DELETE FROM</b> usuarios <b class="sql">WHERE</b> id=3;</li>
         </ul>
         </div>
          `

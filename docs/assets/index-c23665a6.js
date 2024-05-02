@@ -1,4 +1,4 @@
-(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))d(a);new MutationObserver(a=>{for(const e of a)if(e.type==="childList")for(const i of e.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&d(i)}).observe(document,{childList:!0,subtree:!0});function b(a){const e={};return a.integrity&&(e.integrity=a.integrity),a.referrerpolicy&&(e.referrerPolicy=a.referrerpolicy),a.crossorigin==="use-credentials"?e.credentials="include":a.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function d(a){if(a.ep)return;a.ep=!0;const e=b(a);fetch(a.href,e)}})();class r extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+(function(){const l=document.createElement("link").relList;if(l&&l.supports&&l.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))c(a);new MutationObserver(a=>{for(const e of a)if(e.type==="childList")for(const o of e.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&c(o)}).observe(document,{childList:!0,subtree:!0});function d(a){const e={};return a.integrity&&(e.integrity=a.integrity),a.referrerpolicy&&(e.referrerPolicy=a.referrerpolicy),a.crossorigin==="use-credentials"?e.credentials="include":a.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function c(a){if(a.ep)return;a.ep=!0;const e=d(a);fetch(a.href,e)}})();class s extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
         :host{
             display: block;
             max-width: 800px;
@@ -16,7 +16,7 @@
             margin-bottom: 10px;
           }
         `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-        <style>${r.styles}</style>
+        <style>${s.styles}</style>
         <div id="fondo">
         <h1>Angular</h1> 
         Comandos del Angular cli<br>
@@ -65,7 +65,7 @@
         
       </ol>
       </div>
-         `}}customElements.define("angular-commands",r);class l extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+         `}}customElements.define("angular-commands",s);class i extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
         :host{
         }
 
@@ -113,7 +113,7 @@
             color: white; /* Color del texto */
         }
         `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-        <style>${l.styles}</style>
+        <style>${i.styles}</style>
         <br>
         <header>
           <nav>
@@ -125,7 +125,7 @@
           </nav>
         </header>
         <br>
-         `}}customElements.define("best-menu",l);class s extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+         `}}customElements.define("best-menu",i);class r extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
         :host{
             display: block;
             max-width: 800px;
@@ -149,7 +149,7 @@
           }
           
         `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-        <style>${s.styles}</style>
+        <style>${r.styles}</style>
         <div id="fondo">
         <h1>GIT Y GITHUB</h1>
         <p>
@@ -280,7 +280,7 @@
         <li><b>git rebase -i HEAD~4</b> esto trae los ultimos 4 commits y los podemos unir o modificar</li>
       </ul>
       </div>
-         `}}customElements.define("git-hub",s);class t extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+         `}}customElements.define("git-hub",r);class t extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
         :host{
             display: block;
             max-width: 800px;
@@ -301,6 +301,10 @@
           
           ul, li, p {
             margin-bottom: 10px;
+          }
+
+          .sql{
+              color: #0087fd;
           }
         `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
         <style>${t.styles}</style>
@@ -350,37 +354,37 @@
 
         <ol>
             <br>
-            <li>SHOW DATABASES; es para listar las bases de datos que tenemos creadas</li>
-            <li>CREATE DATABASE db_sistema; de esta manera creamos la base de datos</li>
-            <li>USE db_sistema; El USE es para utilizar la base de datos que hemos creado</li>
+            <li><b class="sql">SHOW DATABASES</b>; es para listar las bases de datos que tenemos creadas</li>
+            <li><b class="sql">CREATE DATABASE</b> db_sistema; de esta manera creamos la base de datos</li>
+            <li><b class="sql">USE</b> db_sistema; El USE es para utilizar la base de datos que hemos creado</li>
             <li>Luego procedemos a crear una tabla</li>
             <li style="color:rgb(0, 0, 0);">
-                CREATE TABLE usuarios ( <br>
-                id INT NOT NULL AUTO_INCREMENT, <br>
-                nombre VARCHAR(50) NOT NULL, <br>
-                edad INT NOT NULL, <br>
-                email VARCHAR(100) NOT NULL, <br>
-                PRIMARY KEY (id) <br>
-                ); <br>
+            <b class="sql">CREATE TABLE</b> usuarios <b class="sql">(</b> <br>
+                id <b class="sql">INT NOT NULL AUTO_INCREMENT</b>, <br>
+                nombre <b class="sql">VARCHAR(</b>50<b class="sql">) NOT NULL</b>, <br>
+                edad <b class="sql">INT NOT NULL</b>, <br>
+                email <b class="sql">VARCHAR(</b>100<b class="sql">) NOT NULL</b>, <br>
+                <b class="sql">PRIMARY KEY (</b>id<b class="sql">)</b> <br>
+                <b class="sql">)</b>; <br>
             </li>
-            <li>SHOW TABLES; para listar las tablas de la base de datos</li>
+            <li><b class="sql">SHOW TABLES</b>; para listar las tablas de la base de datos</li>
             <li>Ahora acedemos a la tabla de usuarios que creamos</li>
-            <li>EXPLAIN usuarios; De esta manera listamos las columnas de la tabla de usuarios
+            <li><b class="sql">EXPLAIN usuarios</b>; De esta manera listamos las columnas de la tabla de usuarios
             </li>
             <li>luego le ingresamos datos a la tabla de usuarios de esta manera</li>
             <br>
             <li style="color:rgb(0, 0, 0);">
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Oscar', 25,
-                'oscar@gmail.com');<br>
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Layla', 15,
-                'layla@gmail.com');<br>
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Nicolas', 36,
-                'nico@gmail.com');<br>
-                INSERT INTO usuarios (nombre, edad, email) VALUES ('Chanchito', 7,
-                'osca@gmail.com');<br>
+            <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Oscar', 25,
+                'oscar@gmail.com'<b class="sql">)</b>;<br>
+                <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Layla', 15,
+                'layla@gmail.com'<b class="sql">)</b>;<br>
+                <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Nicolas', 36,
+                'nico@gmail.com'<b class="sql">)</b>;<br>
+                <b class="sql">INSERT INTO</b> usuarios <b class="sql">(</b>nombre, edad, email<b class="sql">) VALUES (</b>'Chanchito', 7,
+                'osca@gmail.com'<b class="sql">)</b>;<br>
             </li>
             <li>Vamos a consultar los datos que acabamos de ingresar</li>
-            <li>SELECT * FROM usuarios;</li>
+            <li><b class="sql">SELECT * FROM</b> usuarios;</li>
         </ol>
         <p>
             Y de esta manera podemos crear las tablas en las base de datos que creemos, Ahora
@@ -388,29 +392,29 @@
             usando claves foráneas
         </p>
         <p style="color:rgb(0, 0, 0);">
-            CREATE TABLE productos <br>
-            ( <br>
-            id INT NOT NULL AUTO_INCREMENT, <br>
-            nombre VARCHAR(50) NOT NULL, <br>
-            fk_user INT NOT NULL, <br>
-            marca VARCHAR(50) NOT NULL, <br>
-            PRIMARY KEY(id), <br>
-            FOREIGN KEY(fk_user) REFERENCES usuarios(id) <br>
-            ); <br>
+        <b class="sql">CREATE TABLE</b> productos <br>
+        <b class="sql">(</b> <br>
+            id <b class="sql">INT NOT NULL AUTO_INCREMENT</b>, <br>
+            nombre <b class="sql">VARCHAR(</b>50<b class="sql">) NOT NULL</b>, <br>
+            fk_user <b class="sql">INT NOT NULL</b>, <br>
+            marca <b class="sql">VARCHAR(</b>50<b class="sql">) NOT NULL</b>, <br>
+            <b class="sql">PRIMARY KEY(</b>id<b class="sql">)</b>, <br>
+            <b class="sql">FOREIGN KEY(</b>fk_user<b class="sql">) REFERENCES</b> usuarios<b class="sql">(</b>id<b class="sql">)</b> <br>
+            <b class="sql">)</b>; <br>
         </p>
         <p>Vamos ingresar dos registros a la tabla de productos, como fk_user es la clave foranea ponemos el id del usuario que queremos asociar con ese producto</p>
         <ul>
-            <li>INSERT INTO productos (nombre, fk_user, marca) VALUES('Celular', 2, 'Motorola');</li>
-            <li>INSERT INTO productos (nombre, fk_user, marca) VALUES('Computador', 1, 'Azus');</li>
+            <li><b class="sql">INSERT INTO</b> productos <b class="sql">(</b>nombre, fk_user, marca<b class="sql">) VALUES(</b>'Celular', 2, 'Motorola'<b class="sql">)</b>;</li>
+            <li><b class="sql">INSERT INTO</b> productos <b class="sql">(</b>nombre, fk_user, marca<b class="sql">) VALUES(</b>'Computador', 1, 'Azus'<b class="sql">)</b>;</li>
         </ul>
         <p>Vamos consultar los productos ingresados utilizando un Join para unir la tabla de productos y usuarios</p>
         <ul>
-            <li>SELECT * FROM productos JOIN usuarios ON productos.fk_user = usuarios.id;</li>
+            <li><b class="sql">SELECT * FROM</b> productos <b class="sql">JOIN</b> usuarios <b class="sql">ON</b> productos.fk_user = usuarios.id;</li>
         </ul>
         <p>Ahora vamos a hacer un UPDATE y DELETE a la tabla de usuarios</p>
         <ul>
-            <li>UPDATE usuarios SET nombre='Pablo' WHERE id=4;</li>
-            <li>DELETE FROM usuarios WHERE id=3;</li>
+            <li><b class="sql">UPDATE</b> usuarios <b class="sql">SET</b> nombre='Pablo' <b class="sql">WHERE</b> id=4;</li>
+            <li><b class="sql">DELETE FROM</b> usuarios <b class="sql">WHERE</b> id=3;</li>
         </ul>
         </div>
          `}}customElements.define("my-sql",t);class n extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
@@ -470,7 +474,7 @@
         <li><b>ctrl + k + z</b> para modo concentración y pa salir es con el Esc.</li>
       </ul>
       </div>
-        `}}customElements.define("visual-studio-code",n);class c extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+        `}}customElements.define("visual-studio-code",n);class b extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
         :host{
             display: block;
             max-width: 800px;
@@ -488,7 +492,7 @@
             margin-bottom: 10px;
           }
         `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-        <style>${c.styles}</style>
+        <style>${b.styles}</style>
         <div id="fondo">
         <h1>Vite</h1>
         <ol>
@@ -500,4 +504,4 @@
             <li><b>npm run build</b></li>
         </ol>
         </div>
-         `}}customElements.define("vite-commands",c);
+         `}}customElements.define("vite-commands",b);
