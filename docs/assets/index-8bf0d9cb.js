@@ -405,7 +405,12 @@
         </ul>
         <p>Vamos consultar los productos ingresados utilizando un Join para unir la tabla de productos y usuarios</p>
         <ul>
-        <li>SELECT * FROM productos JOIN usuarios ON productos.fk_user = usuarios.id;</li>
+            <li>SELECT * FROM productos JOIN usuarios ON productos.fk_user = usuarios.id;</li>
+        </ul>
+        <p>Ahora vamos a hacer un UPDATE y DELETE a la tabla de usuarios</p>
+        <ul>
+            <li>UPDATE usuarios SET nombre='Pablo' WHERE id=4;</li>
+            <li>DELETE FROM usuarios WHERE id=3;</li>
         </ul>
         </div>
          `}}customElements.define("my-sql",t);class n extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
